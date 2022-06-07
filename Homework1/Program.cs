@@ -91,3 +91,17 @@ else
 
 */
 
+//Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+int num1;
+
+Console.Write("Введите число: ");
+num1 = Convert.ToInt32(Console.ReadLine());
+
+int current = 1;
+
+while (current<num1)
+{
+    Console.Write(current+2 + " ");
+    current = current + 2;
+}
