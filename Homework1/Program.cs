@@ -24,7 +24,7 @@ else
 
 //Напишите программу, которая принимает на ход три числа и выдаёт максимальное из этих чисел.
 
-
+/*
 
 int num1, num2, num3;
 
@@ -37,7 +37,6 @@ num2 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите третье число:");
 num3 = Convert.ToInt32(Console.ReadLine());
 
-/*
 
 if (num1>num2)
 {
@@ -108,7 +107,7 @@ int current = 1;
 
 while (current<num1)
 {
-    Console.Write(current+2 + " ");
+    Console.Write(current + " ");
     current = current + 2;
 }
 
