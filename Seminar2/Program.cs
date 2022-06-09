@@ -1,5 +1,4 @@
 ﻿int FindMaxPart(int num)
-
 {
     int des, ed;
 
@@ -22,3 +21,19 @@
         return -1;
     }
 }
+
+Console.Write ("Imput two-digitel number: ");
+int a = Convert.ToInt32 (Console.ReadLine());
+
+int result = FindMaxPart(a);
+
+if (result == -1)
+{
+    Console.WriteLine ("Your number is not two-digital");
+
+}
+else
+{
+    Console.WriteLine($"The biggest number of {a} is {result}");
+}
+
