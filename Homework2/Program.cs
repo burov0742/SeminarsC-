@@ -4,18 +4,18 @@
 // 782 -> 8
 // 918 -> 1
 
-/*
 
-int FindSecondNum (int num)
+
+int FindSecondFigure (int num)
 {
     if (num > -999 && num < 999 &&  num != 0)
     {
-    int des, SecondNum;
+    int des, SecondFig;
 
     des  = num % 100;
-    SecondNum = des / 10;
+    SecondFig = des / 10;
 
-    return SecondNum;
+    return SecondFig;
     }
     else 
 
@@ -25,15 +25,15 @@ int FindSecondNum (int num)
 
 int num,result;
 
-Console.WriteLine("Imput three-digital number: ");
+Console.WriteLine("Imput three-digit number: ");
 num = Convert.ToInt32(Console.ReadLine());
 
-result = FindSecondNum(num);
+result = FindSecondFigure(num);
 
 if (result == -1) Console.WriteLine("Please imput correct number");
-else Console.WriteLine($"The second number is {result}");
+else Console.WriteLine($"The second figure is {result}");
 
-*/
+
 
 // Задача №2: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 // 645 -> 5
