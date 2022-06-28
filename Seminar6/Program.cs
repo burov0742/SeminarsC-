@@ -1,5 +1,5 @@
-﻿/*
-int [] ReverseArray (int [] array)
+﻿
+int[] ReverseArray (int[] array)
 {
     int temp;
     int j = array.Length - 1;
@@ -12,20 +12,19 @@ int [] ReverseArray (int [] array)
         array [j] = temp;
 
         i++;
-        j++;
+        j--;
     }
     
     return array;
 }
 
-int[] myArray = {2, 4, 6, 8};
+int[] myArray = {2, 4, 6, 8, 10};
 
 myArray = ReverseArray(myArray);
 
 for (int i = 0; i < myArray.Length; i++)
 {
-    Console.WriteLine(myArray + " ");
+    Console.Write(myArray[i] + " ");
 }
 
-*/
 
