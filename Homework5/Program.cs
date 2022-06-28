@@ -81,3 +81,41 @@ Console.WriteLine("Sum of all numbers with odd index is " + SumOddIndexNumbers(n
 
 //Задайте массив вещественных(дробных, см. Random().NextDouble()) чисел. Найдите разницу между максимальным и минимальным элементов массива.
 //[3 7 22 2 78] -> 76
+
+double[] CreateRandomDoubleArrray (int size)
+{
+    double [] randomArray = new double [size];
+    for(int i = 0; i < size; i++)
+    {
+        randomArray[i] = new Random().NextDouble()*100;
+        Console.Write(randomArray[i] + " ");
+    }
+    return randomArray;
+}
+
+
+Console.Write("Imput size of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+double [] newArray = CreateRandomDoubleArrray (size);
+
+double FindMaxNum(double[] array)
+{
+    double max = 0;
+
+    for(int i = 0; i < array.Length; i++)
+
+    if (array[i] > array[i+1]) 
+    {
+        max = array[i];
+    }
+    else 
+    {
+        max = array[i+1];
+    }
+    
+    return max;
+}
+
+double maxNum = FindMaxNum(newArray);
+Console.WriteLine($"Max is {maxNum}");
