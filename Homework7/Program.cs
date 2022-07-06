@@ -85,10 +85,10 @@ void FindNumberInTwoDivArray (int a, int b)
 
 - не смог реализовать идею, когда пользователь задает сам массив. 
 Не получилось решить ошибку (error CS7036: Отсутствует аргумент, соответствующий требуемому формальному парамет)
-если я в 75 стрраке на прием в метод вписываю двумерный массив.
+если я в 75 строке на прием в метод вписываю двумерный массив.
 
-Console.Write("Input numbers of rows ");
-int row  = Convert.ToInt32(Console.ReadLine());
+//Console.Write("Input numbers of rows ");
+//int row  = Convert.ToInt32(Console.ReadLine());
 
 //Console.Write("Input numbers of columns ");
 //int colm  = Convert.ToInt32(Console.ReadLine());
@@ -116,6 +116,7 @@ FindNumberInTwoDivArray(a,b);
 //8 4 2 4
 //Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
+/*
 int [,] CreateRandomTwoDivArray (int row, int colm, int min, int max)
 {
     int [,] newArray = new int [row,colm];
@@ -175,3 +176,5 @@ int [,] newMatrix = CreateRandomTwoDivArray(row, colm, min, max);
 ShowTwoDivArray(newMatrix);
 
 FindAverageArithmeticColumns(newMatrix);
+
+*/
