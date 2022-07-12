@@ -8,6 +8,8 @@
 // 2 3 5 9
 // 2 4 4 8
 
+
+
 int [,] CreateRandomTwoDimArray (int row, int colm, int min, int max)
 {
     int [,] newArray = new int [row,colm];
@@ -53,30 +55,31 @@ int [,] SortTwoDimArray (int [,] array)
     int i = 0;
     int j = 0;
     while ( i < array.GetLongLength(0))
+
     {
-        while (j < array.GetLength(1)-1)
-        {
-            if (count < array.GetLength(1)-1 - j)
+            while (j < array.GetLength(1)-1)
             {
-                if (array [i, count] > array[i, count+1])
-                {
-                    int temp = array[i,count];
-                    array[i,count] = array[i, count+1];
-                    array[i, count+1] = temp;
-                    count++;
-                
-                }
-                else count++;
-            }
-            else
-            {
-                count = 0;
-                j++;
-                
-            }
             
-        }
-        i++;
+                if (count < array.GetLength(1)-1 - j)
+                {
+                    if (array [i, count] > array[i, count+1])
+                    {
+                        int temp = array[i,count];
+                        array[i,count] = array[i, count+1];
+                        array[i, count+1] = temp;
+                        count++;
+                    
+                    }
+                    else count++;
+                }
+                else
+                {
+                    count = 0;
+                    j++;
+                    
+                }
+            }
+        
     }
     
     return array;
@@ -137,4 +140,60 @@ SumRow(newMatrix, row);
 //12 13 14 5
 //11 16 15 6
 //10 9 8 7
+/*
+void ShowTwoDimArray (int [,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i ++)
+    {
+        for (int j = 0; j < array.GetLength(1); j ++)
+            Console.Write(array[i,j] + " ");
 
+        Console.WriteLine();
+    }
+}
+
+int [,] CreateSpiralArray (int m, int n)
+{
+    int [,] spiralArray = new int [m,n];
+    int i = 0;
+    int j = 0;
+    int count = 0;
+    while (j < n)
+    {
+        spiralArray[i,j] = count +1;
+        j++;
+        count ++;
+    }
+    while (i < m)
+    {
+        spiralArray[i,j] = count+1;
+        i++;
+        count++;
+    }
+    while (j >=0)
+    {
+        spiralArray[i,j] = count +1;
+        j--;
+        count++;
+    }
+    while(i>0)
+    {
+        spiralArray[i,j] = count + 1;
+        i--;
+        count++;
+    }
+    while(j > m-1)
+    {
+        spiralArray[i,j] = count + 1;
+        count++;
+        j++;
+    }
+
+    return spiralArray;
+}
+
+int m = 4;
+int n = 4;
+
+ShowTwoDimArray(CreateSpiralArray(m,n));
+*/
