@@ -8,8 +8,7 @@
 // 2 3 5 9
 // 2 4 4 8
 
-
-
+/*
 int [,] CreateRandomTwoDimArray (int row, int colm, int min, int max)
 {
     int [,] newArray = new int [row,colm];
@@ -51,35 +50,20 @@ Console.WriteLine();
 
 int [,] SortTwoDimArray (int [,] array)
 {
-    int count =0;
-    int i = 0;
-    int j = 0;
-    while ( i < array.GetLongLength(0))
-
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-            while (j < array.GetLength(1)-1)
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(1)-1; k++)
             {
-            
-                if (count < array.GetLength(1)-1 - j)
+                if (array[i,k] > array[i, k+1])
                 {
-                    if (array [i, count] > array[i, count+1])
-                    {
-                        int temp = array[i,count];
-                        array[i,count] = array[i, count+1];
-                        array[i, count+1] = temp;
-                        count++;
-                    
-                    }
-                    else count++;
-                }
-                else
-                {
-                    count = 0;
-                    j++;
-                    
+                    int temp = array[i, k];
+                    array[i,k] = array[i, k+1];
+                    array[i,k+1] = temp;
                 }
             }
-        
+        }
     }
     
     return array;
@@ -87,6 +71,7 @@ int [,] SortTwoDimArray (int [,] array)
 SortTwoDimArray(newMatrix);
 ShowTwoDimArray(newMatrix);
 
+*/
 
 //Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 //Например, задан массив:
@@ -140,7 +125,9 @@ SumRow(newMatrix, row);
 //12 13 14 5
 //11 16 15 6
 //10 9 8 7
-/*
+
+ //Сделал для любых массивов
+ /*
 void ShowTwoDimArray (int [,] array)
 {
     for (int i = 0; i < array.GetLength(0); i ++)
@@ -158,42 +145,44 @@ int [,] CreateSpiralArray (int m, int n)
     int i = 0;
     int j = 0;
     int count = 0;
-    while (j < n)
+    int c = 1;
+    int c1 = 0;
+    for (i = 0; i<spiralArray.GetLength(0); i++)
+    {
+    while (j < n-c)
     {
         spiralArray[i,j] = count +1;
         j++;
         count ++;
     }
-    while (i < m)
+    while (i < m-c)
     {
         spiralArray[i,j] = count+1;
         i++;
         count++;
     }
-    while (j >=0)
+    while (j >c1)
     {
         spiralArray[i,j] = count +1;
         j--;
         count++;
     }
-    while(i>0)
+    while(i>c1)
     {
         spiralArray[i,j] = count + 1;
         i--;
         count++;
     }
-    while(j > m-1)
-    {
-        spiralArray[i,j] = count + 1;
-        count++;
-        j++;
+    c++;
+    c1++;
     }
+    
 
     return spiralArray;
 }
 
-int m = 4;
-int n = 4;
+int m = 10;
+int n = 15;
 
 ShowTwoDimArray(CreateSpiralArray(m,n));
 */
